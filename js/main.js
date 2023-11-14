@@ -36,13 +36,13 @@ let textloade = () => {
     },0);
     setTimeout(() =>{
         text1.textContent= "Web Developer";
-    },4000);
+    },3750);
     setTimeout(() =>{
         text1.textContent= "DevOps Engineer";
-    },8000);
+    },7500);
 }
     textloade();
-    setInterval(textloade,12000);
+    setInterval(textloade,11250);
 
 // rotate text js code 
 let text = document.querySelector(".text p");
