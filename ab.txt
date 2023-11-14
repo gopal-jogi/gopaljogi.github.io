@@ -1,0 +1,19 @@
+nome
+<html langa"en">
+<head>
+<meta charseta"UTF-8*>
+cmeta http-equiv="X-UA-Compatible"
+contenta*IEvedge">
+<meta name="viewport" content="width=device-
+width, initial-scales1.8*>
+<title>Animated blob</title>
+<Link rel=*stylesheet" href="style.css*>
+</head>
+<body>
+<div classa"wrapper">
+.box
+</div>
+</body>
+</html>
+
+

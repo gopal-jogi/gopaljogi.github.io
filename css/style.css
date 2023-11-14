@@ -289,9 +289,11 @@ section{
 
 .img-my img{
     position: relative;
+    padding-top: 10px;
     width: 400px;
     height: auto;
     z-index: 10;
+    border-radius: 0 0 47% 48%;
 }
 
 .rotate-text{
@@ -320,7 +322,7 @@ section{
     content: "";
     position: absolute;
     inset: 20px;
-    background: blue;
+    background: rgb(0, 0, 0);
     border-radius: 50%;
     z-index: 1;
 }
@@ -351,6 +353,125 @@ section{
     top: 0;
     left: 50%;
     font-size: 1.2rem;
+}
+
+/* about section */
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.about .about-img{
+    /* position: relative; */
+    display: flex;
+    padding-right: 50px;
+    align-items: center;
+    justify-content: center; 
+    height: auto;
+}
+
+.about .about-img .aboutmy{
+    background: url("../img/my1.png");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    height: 550px;
+    width: 550px;
+    padding-top: 20px;
+    box-shadow: 0 20px 5px 5px rgb(255, 255, 255);
+    animation: anima 5s ease-in-out infinite;
+    transition: all 1s ease-in-out;
+}
+
+@keyframes anima{
+    0%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+    50%{
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+    100%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+}
+
+/* .about-img .ring{
+    position: absolute;
+    top: 22%;
+    right: 1%;
+}
+
+.about-img .circle{
+    position: absolute;
+    top: 0;
+    left: -18%;
+    transform: translateX(-50%)rotate(0);
+    border-radius: 50%;
+    animation: rotateText 9s linear infinite;
+    height: auto;
+} */
+
+
+.about-content{
+    padding: 3rem 0;
+}
+
+.about-content h2{
+    color: var(--main-color);
+}
+
+.about-content h3{
+    font-size: 2.1rem;
+    line-height: 3rem;
+    margin: .5rem 0;
+    color: #fff;
+}
+
+.about-content p{
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.about-btn{
+    margin: .8rem 0;
+}
+
+.about-btn button, .cvContent a{
+    background: var(--gradient-white-bg2);
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-style: 1rem;
+    font-weight: 500;
+    color: #fff;
+    box-shadow: rgb(180, 187, 187)0px 1px 2px 0,
+                  rgb(255, 255, 255)0px 2px 6px 2px;
+    margin-right: .5rem;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.about-btn button.active{
+    background: var(--gradient-color-bg);
+    color: #000000;   
+}
+
+.text-box{
+    margin: .8rem 0;
+}
+
+.content-btn > .content:not(:first-child){
+    display: none;
+}
+
+.about-btn button:hover{
+    box-shadow: var(--hover-box-shadow);
+}
+
+.cvContent{
+    margin-top: 1.5rem;
 }
 /* keyframe */
 @keyframes moveText{
