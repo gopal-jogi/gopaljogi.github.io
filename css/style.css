@@ -376,7 +376,7 @@ section{
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
-    height: 550px;
+    height: 500px;
     width: 550px;
     padding-top: 20px;
     box-shadow: 0 20px 5px 5px rgb(255, 255, 255);
@@ -429,7 +429,7 @@ section{
 }
 
 .about-content p{
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 500;
     color: #fff;
 }
@@ -473,6 +473,122 @@ section{
 .cvContent{
     margin-top: 1.5rem;
 }
+
+/* services */
+.skill{
+    position: relative;
+    background-color: #000000;
+    padding-bottom: 200px;
+}
+
+.main-text{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.main-text .heading{
+    color: var(--main-color);
+}
+
+.main-text span{
+    color: var(--font-color);
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.allSkill{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px, auto));
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+
+.skillItem{
+    box-shadow: rgb(180, 187, 187)0px 1px 2px 0,
+                 rgb(255, 255, 255)0px 2px 6px 2px;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    background: var(--gradient-white-bg2);
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.skillItem:hover{
+    box-shadow: var(--hover-box-shadow);
+    transition-delay: 0.5s;
+}
+
+
+.icon-skill{
+    display: inline-flex;
+    position: relative;
+}
+
+.icon-skill i{
+    box-shadow: rgb(180, 187, 187)0px 1px 2px 0,
+                 rgb(255, 255, 255)0px 2px 6px 2px;
+    padding: .5rem;
+    border-radius: 50%;
+    background: var(--gradient-color-bg);
+    widows: 70px;
+    /* width: 70px; */
+    height: 70px;
+    color: #fff;
+    font-size: 2.5rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+    z-index: 1;
+    width: auto;
+    transition: width 0.3s ease-in-out;
+}
+
+.skillItem:hover i{
+    outline: 1px solid var(--main-color);
+    /* transform: scale(1.2); */
+    width: 70px;
+    transition-delay: 0.5s;
+}
+
+.icon-skill span{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: -5px;
+    top: -5px;
+    background: var(--gradient-color-bg);
+    border-radius: 50%;
+    animation: animated 1s linear infinite;
+}
+.skillItem .line{
+    height: 0;
+    transition: height 0.5s ease-in-out;
+}
+.skillItem:hover .line{
+    box-shadow: rgb(180, 187, 187)0px 1px 2px 0,
+                 rgb(255, 255, 255)0px 2px 6px 2px;
+    height: 2px;
+    margin-bottom: 20px;
+    transition-delay: 0.4s;
+}
+.skillItem h3{
+    color: #fff;
+    margin: 1rem 0 0.5rem;
+}
+.skillItem img{
+    height: 0;
+    transition: height 1s ease-in-out;
+}
+.skillItem:hover img{
+    height: 25px;
+    transition-delay: 0.5s;
+}
+
 /* keyframe */
 @keyframes moveText{
     0%,10%,100%{
