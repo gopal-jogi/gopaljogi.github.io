@@ -70,10 +70,10 @@ let tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".project",
       start: "50% 50%",
-      end: "100% 50%", // end after scrolling 500px beyond the start
-    //   markers:true,
+      end: "200% 50%", // end after scrolling 500px beyond the start
+      markers:true,
       pin: true, // pin the trigger element while active
-      scrub: 3, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+      scrub: 4, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
     },
   });
   tl.to("#scroll-1",
@@ -87,7 +87,11 @@ let tl = gsap.timeline({
   .to("#scroll-2",
   {
     opacity:1,
-  })
+  },'pair1')
+  .to(".phone-img",
+  {
+    x:"-556",
+  },'pair1')
   .to("#scroll-2",
   {
     bottom:"70vh",
@@ -99,5 +103,9 @@ let tl = gsap.timeline({
   .to("#scroll-3",
   {
     opacity:1,
-  });
+  },'pair2')
+  .to(".phone-img",
+  {
+    x:"-1112",
+  },'pair2');
   

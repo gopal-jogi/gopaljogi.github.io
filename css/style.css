@@ -591,11 +591,10 @@ section{
 /* project */
 .project{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     gap: 1rem;
     padding: 0vw 0vw 0vw 10vw;
-    background-color: #111;
 }
 .project-content{
     position: relative;
@@ -608,32 +607,53 @@ section{
 }
 .project-text{
     position: absolute;
-    bottom: 10%;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
-    gap: 7vh;
+    color: #fff;
+}
+.project-content h2{
+    color: var(--main-color);
+}
+.project-content h3{
+    font-size: 2.1rem;
+    line-height: 3rem;
+    margin: .5rem 0;
     color: #fff;
 }
 .project-content p{
-    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
 }
+ /* .images-container {
+    display: flex;
+    flex-direction: row; */
+    /* Additional styling for the container */
+    /* You can set width, height, margin, etc. here */
+/* }  */
+.images-container img{
+    margin-top: .5rem;
+} 
 
 .project-img{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0 50px;
     width: 50%;
     height: 100vh;
 }
 
 .phone{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: start;
-    background: url(../img/laptop.png) no-repeat;
-    background-size: 40vw 70vh;
+    /* background: url(../img/laptop.png) no-repeat; */
+    /* background-size: 40vw 70vh; */
+    padding: 0%;
     background-position: center;
     background-clip: content-box;
     /* border-radius: 50px;
@@ -643,20 +663,31 @@ section{
     height: 70vh;
 }
 
+.laptop-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* overflow: hidden; */
+    z-index: 1; /* Ensure the laptop image is in front */
+}
 
 .phone-img{
     display: flex;
     align-items: center;
     justify-content: start;
-    width: 400%;
+    width: 500%;
     height: 47vh;
-    margin-top: -87px;
-    margin-left: 5%;/*5 -87 -178*/
-    overflow: hidden; /* Hide overflow from .phone-img */   
+    margin-top: -125px;
+    /* overflow-x: auto; */
+    /* margin-left: 5;5 -87 -178 */
+    /* overflow: hidden;  Hide overflow from .phone-img    */
 }
 .phone-img img{
-    width: 32vw;
-    margin: 0px 29px;
+    width: 38vw!important;
+    height: 45vh;
+    margin: 0px 40px 0px 0px;
+    object-fit: cover;
     /* height: 50vh; */
     /* position: absolute; */
     /* top: 50%;
