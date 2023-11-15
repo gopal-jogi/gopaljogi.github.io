@@ -64,3 +64,40 @@ buttons.forEach((button, index) => {
         button.classList.add('active');
     });
 });
+
+// srcoll triger
+let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".project",
+      start: "50% 50%",
+      end: "100% 50%", // end after scrolling 500px beyond the start
+    //   markers:true,
+      pin: true, // pin the trigger element while active
+      scrub: 3, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+    },
+  });
+  tl.to("#scroll-1",
+  {
+    bottom:"70vh",
+  })
+  .to("#scroll-1",
+  {
+    opacity:0,
+  })
+  .to("#scroll-2",
+  {
+    opacity:1,
+  })
+  .to("#scroll-2",
+  {
+    bottom:"70vh",
+  })
+  .to("#scroll-2",
+  {
+    opacity:0,
+  })
+  .to("#scroll-3",
+  {
+    opacity:1,
+  });
+  
