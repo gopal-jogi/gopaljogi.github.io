@@ -703,7 +703,33 @@ section{
     transition: all cubic-bezier(0.19, 1, 0.22, 1)3s;
 
 }
+/* contact */
+.contactSkills{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
 
+.contact-info,.skillsProgres{
+    width: 100%;
+    background: var(--gradient-white-bg2);
+    box-shadow: rgba(255, 255, 255, 0.18)0px 2px 4px;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.contact-info input,
+.contact-info form textarea{
+    width: 100%;
+    padding: .8rem;
+    border: 2px solid #333;
+    margin: .5rem 0;
+    background: #111;
+    border-radius: 5px;
+    outline: none;
+    transition: .3s;
+}
+/* demo */
 .abxs{
     width: 100%;
     height: 500px;
