@@ -600,7 +600,7 @@ section{
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
     justify-content: center;
     width: 50%;
     height: 100vh;
@@ -959,7 +959,7 @@ footer{
     /* .about .about-img .aboutmy{
         width: 100%;
     } */
-    .img-hero{
+    .img-my{
         margin-top: 3rem;
     }
  }
@@ -1033,16 +1033,13 @@ footer{
     .project-img{
         display: none;
     }
-    /* .img-my img{
-        ma
-        width: 100%;
-    } */
     .about .about-img .aboutmy{
         width:340px;
         
         margin-left: 50px;
         
     }
+    
     .text-animation{
         width: 23.8rem;
     }
