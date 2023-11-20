@@ -71,7 +71,7 @@ let tl = gsap.timeline({
       trigger: ".project",
       start: "50% 50%",
       end: "200% 50%", // end after scrolling 500px beyond the start
-      markers:true,
+    //   markers:true,
       pin: true, // pin the trigger element while active
       scrub: 4, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
     },
