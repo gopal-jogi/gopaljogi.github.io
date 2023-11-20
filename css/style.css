@@ -953,7 +953,7 @@ footer{
     .home{
         flex-direction: column-reverse;
     }
-    .about,.contactSkills,.about .about-img .aboutmy{
+    .about,.contactSkills,.about .about-img .aboutmy,.project{
         flex-direction: column;
     }
     /* .about .about-img .aboutmy{
@@ -1030,9 +1030,9 @@ footer{
     .input-box input {
         width: 100%;
     }
-    /* .rotate-text{
+    .project-img{
         display: none;
-    } */
+    }
     /* .img-my img{
         ma
         width: 100%;

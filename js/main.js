@@ -73,12 +73,12 @@ let tl = gsap.timeline({
       end: "200% 50%", // end after scrolling 500px beyond the start
     //   markers:true,
       pin: true, // pin the trigger element while active
-      scrub: 4, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+      scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
     },
   });
   tl.to("#scroll-1",
   {
-    bottom:"70vh",
+    bottom:"50vh",
   })
   .to("#scroll-1",
   {
@@ -94,7 +94,7 @@ let tl = gsap.timeline({
   },'pair1')
   .to("#scroll-2",
   {
-    bottom:"70vh",
+    bottom:"50vh",
   })
   .to("#scroll-2",
   {
