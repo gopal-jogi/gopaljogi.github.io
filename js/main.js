@@ -201,3 +201,35 @@ ScrollReveal().reveal('.about-img,.fillter-buttons,.contact-info', { origin: "le
 ScrollReveal().reveal('.about-content,.skillsProgres', { origin: "right" });
 ScrollReveal().reveal('.allServices,.portfolio-gallery,footer,.img-my', { origin: "bottom" });
 
+
+// contact form
+function sendEmail() {
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+
+    const xhr = new XMLHttpRequest();
+    const url = 'sendmail.php'; // Replace with your server-side script URL
+
+    const params = `firstName=${firstName}&lastName=${lastName}&email=${email}&subject=${subject}&message=${message}`;
+    xhr.open('POST', url, true);
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                // Request was successful, handle the response here if needed
+                alert('Message sent successfully!');
+            } else {
+                // Handle error
+                alert('Sorry, there was an error sending your message.');
+            }
+        }
+    };
+
+    xhr.send(params);
+}
+
+
