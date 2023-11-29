@@ -28,9 +28,3 @@ The portfolio showcases my projects, skills, and experience.
 
 - Open the index.html file in a web browser to explore the portfolio.
 
-## Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/your-username/myportfolio.git
