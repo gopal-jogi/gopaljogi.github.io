@@ -13,10 +13,6 @@ The portfolio showcases my projects, skills, and experience.
 - JavaScript ![JavaScript Icon](https://github.com/github/explore/raw/main/topics/javascript/javascript.png)
 
 
-- HTML ![HTML Icon](path/to/html-icon.png)
-- CSS ![CSS Icon](path/to/css-icon.png)
-- JavaScript (if applicable) ![JavaScript Icon](path/to/js-icon.png)
-
 ## Features
 
 - Showcase various projects
