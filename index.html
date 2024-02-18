@@ -29,7 +29,7 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="right-header">
-            <a href="#" class="btn">Let's chat <i class="bx bx-message-dots"></i></a>
+            <a id="openWhatsApp" class="btn">Let's chat <i class="bx bx-message-dots"></i></a>
             <div class="menu-icon">
                 <div class="bar"></div>
             </div>
@@ -345,7 +345,7 @@
                     <h2 class="heading">Contact Me</h2>
                     <span>get in touch with me</span>
                 </div>
-                <form action="sendmail.php" method="POST">
+                <form name="google-sheet" method="POST">
                     <div class="input-box">
                         <input type="text" name="firstName" placeholder="First Name">
                         <input type="text" name="lastName" placeholder="Last Name">
@@ -354,7 +354,7 @@
                     <input type="text" name="subject" placeholder="Subject">
                     <textarea name="message" cols="30" rows="10" placeholder="Message"></textarea>
                     <div class="formBtn">
-                        <button type="submit" class="btn">Send Message</button>
+                        <button type="submit" class="btn" name="submit" >Send Message</button>
                     </div>
                 </form>
                 
@@ -491,6 +491,23 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <!-- mixitup cdn js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+    <script>
+        document.getElementById('openWhatsApp').addEventListener('click', function() {
+            window.open('https://web.whatsapp.com/', '_blank');
+        });
+    </script>
+    <script>
+        const scriptURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSdMFUITTzGgrzph1M_La_Qkm-sKlKqXgY78bNPKnjcrK2BRGqjIkRTHn111IrlFMjnt9rnQQysdtsE/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false'
+        const form = document.forms['google-sheet']
+    
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
 </body>
 
 </html>
