@@ -498,6 +498,8 @@
 
             var url = 'https://web.whatsapp.com/send?phone=' + phoneNumber + '&text=' + message;
             window.open(url, '_blank');
+            var desktopUrl = 'whatsapp://send?phone=' + phoneNumber + '&text=' + message;
+            window.location.href = desktopUrl;
         });
     </script>
     <script>
