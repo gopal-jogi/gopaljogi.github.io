@@ -493,7 +493,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
     <script>
         document.getElementById('openWhatsApp').addEventListener('click', function() {
-            window.open('https://web.whatsapp.com/', '_blank');
+            var phoneNumber = '7498447894'; 
+            var message = encodeURIComponent('Hello, you can hire me'); // URL encode your message
+
+            var url = 'https://web.whatsapp.com/send?phone=' + phoneNumber + '&text=' + message;
+            window.open(url, '_blank');
         });
     </script>
     <script>
