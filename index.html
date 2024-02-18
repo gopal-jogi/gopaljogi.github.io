@@ -503,15 +503,23 @@
         });
     </script>
     <script>
-        const scriptURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSdMFUITTzGgrzph1M_La_Qkm-sKlKqXgY78bNPKnjcrK2BRGqjIkRTHn111IrlFMjnt9rnQQysdtsE/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false'
-        const form = document.forms['google-sheet']
-    
+        const scriptURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSdMFUITTzGgrzph1M_La_Qkm-sKlKqXgY78bNPKnjcrK2BRGqjIkRTHn111IrlFMjnt9rnQQysdtsE/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false';
+        const form = document.forms['google-sheet'];
+
         form.addEventListener('submit', e => {
-            e.preventDefault()
+            e.preventDefault();
             fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
-                .catch(error => console.error('Error!', error.message))
-        })
+                .then(response => {
+                    if (response.ok) {
+                        alert("Thanks for contacting us! We will contact you soon.");
+                        form.reset();
+                    } else {
+                        alert("Oops! Something went wrong. Please try again later.");
+                    }
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+
     </script>
 
 </body>
